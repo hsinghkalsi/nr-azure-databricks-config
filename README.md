@@ -40,7 +40,7 @@ if [ \$DB_IS_DRIVER ]; then
   \$sudo dpkg -i /tmp/newrelic-infra_upstart_1.3.27_upstart_amd64.deb
 
   #Download nr-nri-spark integration
-  \$sudo wget https://github.com/hsinghkalsi/nr-azure-databricks-config/releases/download/1.0/nr-nri-spark.tar.gz  -P /tmp
+  \$sudo wget https://github.com/hsinghkalsi/nr-azure-databricks-config/releases/download/1.0.1/nr-nri-spark.tar.gz  -P /tmp
 
   #extract the contents to right place
   \$sudo tar -xvzf /tmp/nr-nri-spark.tar.gz -C /
