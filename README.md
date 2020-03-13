@@ -5,11 +5,11 @@ This readme provide instructions to deploy along with apache spark on host integ
 
 ## Instructions
 
-1. Create a new notebook to deploy the cluster intialization script
+1. Create a new notebook to deploy the cluster intialization script. 
 2. Configure **<NR_WORKING_FOLDER>** with the location to put the init script.
 3. Replace **<NR_LICENSE_KEY>** with your New Relic license.
-4. Run this notebook to create the script newrelic_install.sh in /tmp folder.
-5. Configure a cluster with the ***newrelic_install.sh*** cluster-scoped init script using the UI, Databricks CLI, or by invoking the Clusters API.
+4. Run this notebook to create to deploy the new_relic_install.sh script in dbfs in configured folder.
+5. Configure target cluster with the ***newrelic_install.sh*** cluster-scoped init script using the UI, Databricks CLI, or by invoking the Clusters API.
 
 ``` shell
 dbutils.fs.put("dbfs:/<NR_WORKING_FOLDER>/newrelic_install.sh",""" 
