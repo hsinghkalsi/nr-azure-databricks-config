@@ -75,41 +75,7 @@ fi
 ```
 
 
-# New Relic Infrastructure Integration for Apache Spark (METRICS INTEGRATION)
 
-This New Relic  standalone integration polls the Apache Spark [REST API](https://spark.apache.org/docs/latest/monitoring.html#rest-api) for metrics and pushes them into New Relic  using Metrics API
-
-It uses the New Relic [Telemetry sdk for go](https://github.com/newrelic/newrelic-telemetry-sdk-go)
-
-## Requirements
-
-* Apache Spark runnning in standalone mode (YARN and mesos not yet supported)
-
-## Installation & Configuration
-
-1. Download the latest package from Release.
-2. Install the NR Spark Metric plugin plugin using the following command 
-    > sudo tar -xvzf /tmp/nri-spark-metric.tar.gz -C /
-
-    The following files will be installed 
-    ```
-    /etc/nri-spark-metric/
-    /etc/nri-spark-metric/nr-spark-metric
-    /etc/systemd/system/
-    /etc/systemd/system/nr-spark-metric.service
-    /etc/init/nr-spark-metric.conf
-    ```
-3. Create "*nr-spark-metric-settings.yml*" file in the the folder "*/etc/nri-spark-metric/*"  using the following format
-    ```
-    sparkmasterurl: "http://localhost:8080"  <== FQDN ofspark master URL
-    clustername:  mylocalcluster             <== Name of the cluster
-    insightsapikey: xxxx                     <== Insights api key
-    pollinterval: 5                          <== Polling interval
-    ```
-4. Run the following command.
-    > service nr-spark-metric start
-
-5. Check for metrics in "Metric" event type in Insights
 
 ## Databricks Init script creator notebook for metrics endpoint
 
